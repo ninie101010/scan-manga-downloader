@@ -109,10 +109,10 @@ for chapter in tqdm.tqdm(chapters, desc = 'Total'):
   
     req = fetch(image_url, headers = {
       'Origin': 'https://www.scan-manga.com',
-      'Referer': 'https://www.scan-manga.com/lecture-en-ligne/Tensei-Shitara-Slime-Datta-Ken-Chapitre-102-FR_285197.html'
+      'Referer': 'https://www.scan-manga.com/13121-36909/The-Problematic-Prince.html'
     })
     
-    image_name = f'./{manga_dir}/{manga_slug}_ch{chapter["n"]}_{page_number}.{image["e"]}'
+    image_name = f'./{manga_dir}/{manga_slug}_ch{chapter["1-57"]}_{page_number}.{image["e"]}'
 
     with open(image_name, 'wb') as file:
       file.write(req.content)
